@@ -8,6 +8,7 @@
         tools:context=".MainActivity">
 
     <android.support.v7.widget.RecyclerView
+            android:id="@+id/chatRecyclerView"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -15,7 +16,7 @@
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
-            app:layout_constraintBottom_toTopOf="@id/messageEditText"/>
+            app:layout_constraintBottom_toTopOf="@id/divider"/>
 
     <View
             android:id="@+id/divider"
