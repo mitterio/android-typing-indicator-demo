@@ -19,7 +19,7 @@ import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
 
 class MainActivity : AppCompatActivity() {
-    private val channelId = "KNOqT-6GwKj-oVZG3-gws36"
+    private val channelId = "1b64f730-5f68-11e9-b2ba-ad1d24d10e13"
     private val messageList: MutableList<Any> = mutableListOf()
     private lateinit var chatRecyclerViewAdapter: ChatRecyclerViewAdapter
 
@@ -96,7 +96,7 @@ class MainActivity : AppCompatActivity() {
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     fun onTypingIndication(typingIndicator: TypingIndicator) {
-        if (messageList.last() != "") {
+        if (messageList.isEmpty() || messageList.last() != "") {
             messageList.add("")
             chatRecyclerViewAdapter.notifyItemInserted(messageList.size - 1)
             chatRecyclerView.scrollToPosition(messageList.size - 1)
