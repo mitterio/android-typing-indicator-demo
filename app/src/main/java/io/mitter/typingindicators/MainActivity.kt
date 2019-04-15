@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
+import android.widget.Toast
 import com.jakewharton.rxbinding2.widget.textChanges
 import io.mitter.android.Mitter
 import io.mitter.android.error.model.base.ApiError
